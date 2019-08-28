@@ -15,7 +15,7 @@ body {
     border: 2px solid #8b4000;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-    padding: 3vh;
+    padding: 20px;
     transition: all 0.3s ease;
 }
 
@@ -26,9 +26,14 @@ body {
 
 .main > a { margin: 5px 15px 5px 5px; }
 
-/*Media adjusts*/
+/* Mudanças especificas */
+#conteudo {
+    margin-top: 0px;
+}
+
+/* Viewport */
 @media screen and (max-width: 500px) {
-    .main a { font-size: 6.5vw; width: 100%; }
+    .main a { font-size: 6.5vw; width: 100%; padding: 15px; }
     
-    #conteudo { margin-top: 2vh; width: 90vw; overflow: hidden; }
+    #conteudo { width: 90vw; overflow: hidden; }
 }
