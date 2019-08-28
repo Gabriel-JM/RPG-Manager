@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+/*Mudanças Gerais*/
+
+/*Classes*/
+.info-armadilhas {
+    background: #fbfbf5;
+    width: 30vh;
+    height: 29vh;
+    padding: 1.5vh;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 9px;
+    box-shadow: 0px 0px 0px 4px #fbfbf5;
+}
+
+.info-armadilhas h3 {
+    color: #000;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'fonte-chelaOne';
+    font-size: 25px;
+    text-align: center;
+    padding: 0.5vh;
+    padding-left: 8px;
+    border-radius: 3px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.info-armadilhas p , .info-armadilhas ul {
+    font-size: 15px;
+    margin: 0;
+}
+
+.cortante h3 {
+    border-bottom: 2px solid #811;
+}
+
+.perfurante h3 {
+    border-bottom: 2px solid #555;
+}
+
+.concussao h3 {
+    border-bottom: 2px solid #321;
+}
+
+.veneno h3 {
+    border-bottom: 2px solid #562;
+}
+
+.magia h3 {
+    border-bottom: 2px solid #482683;
+}
+
+.fogo h3 {
+    border-bottom: 2px solid #dd4400;
+}
+
+.addArmadilha {
+    width: 85vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.addArmadilha button {
+    width: 100%;
+    color: white;
+    padding: 8px;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: #07a;
+    cursor: pointer;
+}
+
+/* Estilo do modal para adicionar novas armadilhas*/
+.modal-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: dropDown 0.5s;
+}
+
+.modal {
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    padding: 20px 30px 20px 30px;
+    width: 40vw;
+    border-radius: 3px;
+    border: 7px solid #8b4000;
+    box-shadow: 0 0 0 7px #fdfdff;
+    position: relative;
+}
+
+.modal h3 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-family: 'fonte-patuaone';
+    font-size: 1.6rem;
+    border-bottom: 2px solid #8b4000;
+    padding-bottom: 5px;
+}
+
+.modal label {
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-family: 'fonte-righteous', monospace;
+}
+
+.modal input[type="text"], .modal select {
+    display: block;
+    width: 97.2%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+}
+
+.modal select {
+    width: 100%;
+}
+
+.modalAberto {
+    display: flex;
+}
+
+/* Estilo da seção de locais e dos checkboxes */
+.locais {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.locais label {
+    display: block;
+    position: relative;
+    font-size: 1.03rem;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.locais input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.locais span {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ddd;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.locais label:hover input ~ span {
+    background-color: #bbb;
+}
+
+.locais label input:checked ~ span {
+    background-color: #ffb900;
+}
+
+.locais span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.locais label input:checked ~ span:after {
+    display: block;
+}
+
+.locais label span:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Botão para fechar o modal*/
+.fecharModal {
+    position: absolute;
+    width: 26px;
+    text-align: center;
+    top: -27px;
+    right: -20px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: #8b4000;
+    border: 4px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/*Mudanças Especificas*/
+#conteudo {
+    color: #111;
+    font-family: 'fonte-righteous', monospace;
+    width: 90vw;
+    margin-top: 3vh;
+    padding: 4px;
+}
+
+#adicionarTestes {
+    margin-top: 24px;
+}
+
+#adicionarTestes header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    padding: 0px 4px 6px 4px;
+}
+
+#adicionarTestes h4 {
+    margin: 0px 8px 3px 0px;
+    font-family: 'fonte-righteous', monospace;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+#adicionarTestes button {
+    color: white;
+    background-color: #595;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+/* Animações */
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Viewport */
+@media screen and (max-width: 1024px) {
+    .info-armadilhas {
+        width: 40vh;
+        height: 35vh;
+    }
+
+    .modal {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .modal {
+        width: 85vw;
+        padding: 20px;
+    }
+
+    .modal h3 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .modal input[type="text"] {
+        width: 95%;
+    }
+
+    .locais {
+        flex-direction: column;
+    }
+
+    .locais label {
+        margin: 5px;
+    }
+}

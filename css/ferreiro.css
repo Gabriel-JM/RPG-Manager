@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+:root {
+    --prata-color: #aaa;
+    --armaone-color: #777;
+    --ouro-color: #f6f600;
+    --derreter-color: #333;
+    --arma3-color: #3396FF;
+}
+
+/*Classes*/
+.set-cor-ouro { color: var(--ouro-color); text-shadow: 0px 0px 10px #cccc00; }
+.set-cor-armaone { color: #222; text-shadow: none; }
+.set-cor-joia { color: #3194e4; text-shadow: 0px 0px 2px rgba(200, 200, 200, 0.5);}
+
+.titulo {
+    color: #222;
+    font-style: italic;
+    margin: 0;
+    padding: 10px;
+}
+
+.descricao {
+    background-color: #ddd;
+    font-size: 14px;
+    padding: 5px 5px 10px 5px;
+    margin: 0; 
+}
+
+.material {
+    color: #222;
+    background-color: #bbb;
+    border-top: 1px solid var(--prata-color);
+    padding: 10px 5px 10px 5px;
+    text-align: left;
+    font-size: 15px;
+    margin: 0;
+}
+
+.preco {
+    margin: 0;
+    color: var(--ouro-color);
+    text-shadow: 0px 0px 10px #cccc00;
+    font-size: 15pt;
+    padding: 10px;
+}
+
+/*Mudanças especificas*/
+#conteudo {
+    font-family: 'fonte-righteous', monospace;
+    width: 95vw;
+    padding: 3vh;
+}
+
+#tabela-derreter {
+    background-color: var(--derreter-color);
+    border: 3px solid var(--derreter-color);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: left;
+    width: 35vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+#tabela-derreter .titulo {
+    color: #ffc04c;
+    text-shadow: 0px 2px 1px #e59400;
+    text-align: center;
+}
+
+#tabela-derreter .preco { text-align: center; }
+
+#tabela-prata {
+    background-color: var(--prata-color);
+    border: 3px solid var(--prata-color);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    width: 32vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+#tabela-prata .titulo {
+    color: #ddd;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+#tabela-arma1 {
+    background-color: var(--armaone-color);
+    border: 3px solid var(--armaone-color);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    width: 33vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+#tabela-arma3 {
+    background-color: var(--arma3-color);
+    border: 3px solid var(--arma3-color);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    width: 33vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); 
+}
+
+@media screen and (max-width: 400px) {
+    #conteudo { width: 90vw;}
+    #tabela-derreter { width: 80vw; }
+    #tabela-prata { width: 80vw; }
+    #tabela-armaOne { width: 80vw; }
+}
+
+@media screen and (min-width: 500px) {
+    #conteudo { width: 80vw; }
+}

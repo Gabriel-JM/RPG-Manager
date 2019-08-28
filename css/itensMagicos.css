@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/*Mudanças gerais*/
+section {
+    width: 95vw;
+    /*border: 1px solid blue;*/
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 20px;
+    padding: 6px;
+}
+
+/*Classes*/
+.set-centro { text-align: center; }
+
+.titulo-coluna {
+    background-color: #111;
+    color: #bbb;
+    font-style: italic;
+}
+
+.tabela {
+    border: 2px solid black;
+    border-spacing: 0px;
+    border-radius: 3px;
+    margin: 1vh 0 10px 2vw;
+    font-family: fonte-righteous, monospace;
+    color: #ddd;
+    background-color: #333;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.tabela td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 2.2vh;
+}
+
+.tabela tr td:first-child {
+    text-align: center;
+    background-color: #111;
+    color: #bbb;
+    font-style: italic;
+}
+
+.tabela td:not(.set-centro) {
+    padding: 5px 10px;
+}
+
+.dado-tabelaA {
+    border: 1px solid black;
+    font-size: 13pt;
+    color: #bbb;
+    background-color: #000;
+}
+
+.titulo-tabela {
+    color: #111;
+    border-bottom: 2px solid #420d09;
+    border-radius: 3px;
+    font-size: 20pt;
+    margin: 0;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 1vh;
+    font-family: fonte-righteous, monospace;
+    padding: 2px;
+}
+
+.div-tabela-flex {
+    margin-bottom: 20px;
+}
+
+/*Mudanças especificas*/
+#titulo-tabelaA {
+    text-shadow: 2px 1px #ccc;
+}
+
+#titulo-tabelaB {
+    text-shadow: 2px 1px #ccc;
+}
+
+#titulo-tabelaC {
+    text-shadow: 2px 1px #f6f600;
+}
+
+/*Media*/
+@media screen and (max-width: 500px) {
+    .tabela { width: 80vw; }
+}
+@media screen and (max-width: 800px) and (min-width: 501px) {
+    .tabela { width: 40vw; }
+    .dado-tabelaA { font-size: 13pt; }
+}

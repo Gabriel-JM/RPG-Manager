@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/*Variáveis*/
+:root {
+    --bg-cor: #aa7243;
+    --border-cor: #964b00;
+    --border-rad: 8px;
+    --input-bg: rgba(240, 240, 240, 0.2);
+}
+
+/*Mudanças Gerais*/
+p { margin: 0; }
+
+/*Mudanças Especificas*/
+#conteudo {
+    background-color: var(--bg-cor);
+    border: 5px solid var(--border-cor);
+    border-radius: var(--border-rad);
+    display: block;
+    padding: 10px 20px 10px 20px;
+}
+
+#conteudo h2 {
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 3px;
+    padding-left: 6px;
+    border-bottom: 2px solid #237;
+}
+
+#add-per-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 79vw;
+    margin: auto;
+    padding: 2px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #237;
+}
+
+#add-per-form input[type="text"] {
+    margin-top: 6px;
+    padding: 5px;
+    border: 2px solid #333;
+    width: calc(75% - 50vw);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+}
+
+#add-per-form input[type="text"]::placeholder { color: black; }
+
+#add-personagem {
+    width: 31vh;
+    padding: 5px;
+    border: 2px solid #111;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ddd;
+    text-align: center;
+}
+
+#add-personagem span {
+    color: #45d600;
+    font-size: 15pt;
+}
+
+#sessao-personagens {
+    background: #eee;
+    border: 3px solid #555;
+    margin: 10px;
+    padding: 7px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+#sessao-personagens .titulo {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14pt;
+    padding: 7px;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+#sessao-personagens .charSheet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 7px;
+    color: #111;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#sessao-personagens input {
+    max-width: 100px;
+    background-color: #eee;
+    margin-left: 3px;
+    margin-right: 20px;
+    padding: 5px;
+    padding-bottom: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+#players-zone {
+    margin: auto;
+    padding: 4px;
+    max-width: 65vw;
+}
+
+/*Classes*/
+.cor-nivel { color: blue; }
+.cor-nome { color: #777; }
+.cor-xp { color: darkolivegreen; }
+.cor-gold { color: darkgoldenrod; }
+
+.deleteBtn {
+    background-color: #d33;
+    color: #eee;
+    width: 25px;
+    height: 25px;
+    padding-top: 3px; 
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*Compatibilidade*/
+@media screen and (max-width: 425px) {
+    #conteudo { width: 76vw; }
+    
+    #conteudo h2 { margin-bottom: 5px; }
+    
+    #add-per-form { display: block; width: auto; }
+    
+    #add-per-form p { margin: auto; }
+    
+    #add-per-form input[type="text"] { display: block; width: 90%; margin: 10px auto; }
+    
+    #add-personagem { width: 90%; margin: auto; }
+    
+    .charSheet { flex-direction: column; align-items: center; width: 40vw; margin: auto; }
+    
+    .charSheet input { display: block; margin-bottom: 30px; text-align: center; }
+    
+    .deleteBtn { width:100% ; }
+}

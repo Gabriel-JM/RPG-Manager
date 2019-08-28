@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/*Mudanças Gerais*/
+input[type="text"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.19);
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: 5px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #111;
+    color: #ddd;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/*Mudanças Especificas*/
+#conteudo {
+    width: 95vw;
+    font-family: 'fonte-righteous';
+    padding: 1vh;
+    margin-top: 4vh;
+    margin-bottom: 16vh;
+    justify-content: flex-start;
+}
+
+#output {
+    margin-left: 10px;
+}
+
+/*Classes*/
+.main-title {
+    font-style: italic;
+    font-size: 16pt;
+    border-bottom: 3px solid #822;
+    text-align: center;
+    padding: 1vh;
+    width: 200vh;
+    margin: 0 0 30px 0;
+}
+
+.main-div {
+    width: 80vw;
+    background-color: #b87333;
+    border: 3px solid #964b00;
+    padding: 8px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.title {
+    font-size: 18pt;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.search {
+    border-bottom: 3px solid #964b00;
+    padding: 3px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.nome-skill {
+    color: #15600e;
+    text-shadow: 0px 0px 1px rgba(230, 230, 230, 0.3);
+}
+
+.nome-ataque {
+    color: #fda500;
+    text-shadow: 0px 0px 1px rgba(230, 230, 230, 0.3);
+}
+
+.atributos {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+.atributos td {
+    width: 14vh;
+    color: #ccc;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #111;
+}
+
+.atributos .valores td {
+    text-align: center;
+    color: #222;
+    background-color: #ccc;
+}
+
+.not-found {
+    width: 20vh;
+    color: #a11;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    background-color: #e44;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-div { width: 90vw; }
+    #output { font-size: 2.5vh; margin-left: 0; }
+    .not-found { width: 20vh; }
+}

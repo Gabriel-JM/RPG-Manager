@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/inimigos.css">
+    <link rel="shortcut icon" href="../imagens/DnDragon.ico">
+    <title>Inimigos</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1 id="titulo">RPG Manager</h1>
+        <h3>inimigos</h3>
+    </header>
+    
+    <section id="conteudo">
+        <h3 class="main-title">An enemy lies ahead!</h3>
+        <div class="main-div">
+            <div class="search">
+                <h4 class="title">Pesquisar</h4>
+                <form id="searchForm">
+                    <input id="inp" type="text" placeholder="Digite aqui o nome..." autofocus="focus" autocomplete="off" list="nomesCriaturas">
+                    <input id="sub" type="submit" value="Procurar">
+                    <datalist id="nomesCriaturas">
+                    </datalist>
+                </form>
+            </div>
+            
+            <div id="output">
+                <p style="padding: 5px">Aqui irá aparecer os dados da criatura escolhida</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="back-menu">
+        <div id="footer-message" class="display-flex"><h2>GO Back !!!</h2></div>
+        <div class="display-flex">
+            <a href="../index.html">Home</a>
+            <a href="ItensMagicos.html">Itens Mágicos</a>
+            <a href="ferreiro.html">Ferreiro</a>
+            <a href="armadilhas.html">Armadilhas</a>
+            <a href="itensLoja.html">Loja de itens</a>
+            <a href="personagens.html">Personagens</a>
+        </div>
+    </footer>
+    
+    <script src="../js/objInimigo.js"></script>
+    <script src="../js/inimigos.js"></script>
+</body>
+</html>

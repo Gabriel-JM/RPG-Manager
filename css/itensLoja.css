@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/*Mudanças Gerais*/
+body { font-family: 'fonte-righteous', monospace; }
+
+div { margin: 8px 12px 5px 12px; }
+
+h3 { margin: 0px; margin-bottom: 3px;}
+
+p { margin: 0px; }
+
+/*Mudanças Especificas*/
+#conteudo {
+    width: 93vw;
+    background-color: #aa7243;
+    border: 10px solid #631;
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*Classes*/
+.set-cor-fogo { color: #ff8800; text-shadow: 0px 0px 2px #ff6600; }
+
+.set-cor-cura { color: #45f600; text-shadow: 0px 0px 6px #00cc00; }
+
+.imagem-icone { float: left; width: 70px; height: 85px; margin-right: 5px; }
+
+.divisoria { border-bottom: 5px solid #631; padding: 0px 10px 0px 10px; }
+
+.item-loja {
+    width: 38vh;
+    background-color: #a63;
+    border: 3px solid #421;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.item-loja h3 {
+    font-size: 1.1em;
+}
+
+.item-loja p:last-child span {
+    color: #f4f400; text-shadow: 0px 0px 8px #cccc00;
+}
+
+@media screen and (max-width: 425px) {
+    #conteudo { width: 85vw; }
+    .divisoria { border: none; }
+}
