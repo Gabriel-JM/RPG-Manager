@@ -80,7 +80,7 @@ input:focus{ outline: none; }
     width: 80vw;
     margin: auto;
     margin-top: 4vh;
-    padding: 6vw;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;

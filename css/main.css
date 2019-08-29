@@ -28,12 +28,12 @@ body {
 
 /* Mudanças especificas */
 #conteudo {
-    margin-top: 0px;
+    margin-top: 20px;
 }
 
 /* Viewport */
 @media screen and (max-width: 500px) {
-    .main a { font-size: 6.5vw; width: 100%; padding: 15px; }
+    .main a { font-size: 1.4rem; width: 100%; padding: 15px; }
     
-    #conteudo { width: 90vw; overflow: hidden; }
+    #conteudo { width: 85vw; overflow: hidden; }
 }
