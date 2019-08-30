@@ -13,5 +13,12 @@ const addTesteBtn = document.querySelector('#adicionarTestes header button')
 */
 
 addTesteBtn.addEventListener('click', (e) => {
-	addTeste.innerHTML += e.target
+	e.preventDefault()
+	add()
 })
+
+function add() {
+	const p = document.createElement('p')
+	p.innerHTML = "Hello World"
+	addTeste.appendChild(p)
+}
