@@ -128,7 +128,8 @@
     box-sizing: border-box;
     background-color: #fdfdfd;
     padding: 20px 30px 20px 30px;
-    width: 40vw;
+    width: 45vw;
+    max-height: 90vh;
     border-radius: 3px;
     border: 7px solid #8b4000;
     box-shadow: 0 0 0 7px #fdfdff;
@@ -229,6 +230,33 @@
     transform: rotate(45deg);
 }
 
+.localTeste {
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    align-items: center;;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    margin: 3px 0;
+}
+
+.localTeste input[type="text"] {
+    width: 85%;
+    margin-right: 5px;
+}
+
+.excluirTeste {
+    background-color: #9a0202;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    width: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 /* Botão para fechar o modal*/
 .fecharModal {
     position: absolute;
@@ -256,12 +284,9 @@
 }
 
 #adicionarTestes {
-    margin-top: 24px;
+    margin-top: 14px;
     margin-bottom: 18px;
     max-height: 140px;
-    overflow: visible;
-    overflow-x: hidden;
-    overscroll-behavior: smooth;
 }
 
 #adicionarTestes header {
@@ -277,6 +302,13 @@
     font-family: 'fonte-righteous', monospace;
     font-weight: normal;
     font-size: 1.2rem;
+}
+
+#localTestes {
+    max-height: 100px;
+    overflow: visible;
+    overflow-x: hidden;
+    overscroll-behavior: smooth;
 }
 
 /* Animações */
@@ -300,6 +332,24 @@
 
     .modal {
         width: 60vw;
+        max-height: 88vh;
+    }
+
+    .localTeste {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .fecharModal {
+        top: 1px;
+        right: 1px;
     }
 }
 
