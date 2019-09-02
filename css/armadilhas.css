@@ -258,6 +258,10 @@
 #adicionarTestes {
     margin-top: 24px;
     margin-bottom: 18px;
+    max-height: 140px;
+    overflow: visible;
+    overflow-x: hidden;
+    overscroll-behavior: smooth;
 }
 
 #adicionarTestes header {
@@ -315,7 +319,7 @@
     }
 
     .locais {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .locais label {
