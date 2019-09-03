@@ -163,7 +163,7 @@
         <div class="modal">
             <h3>Adicionar Armadilha</h3>
             <b class="fecharModal">X</b>
-            <div id="modalForm">
+            <form id="modalForm" onsubmit="salvarArmadilhas()">
                 <div class="modal-inputs">
                     <label for="nome">Nome
                         <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Ex: Espinhos">
@@ -177,15 +177,15 @@
                 <label>Locais disponiveis</label>
                 <div class="locais">
                     <label>Chão
-                        <input type="checkbox">
+                        <input type="checkbox" name="chao">
                         <span></span>
                     </label>
                     <label>Parede
-                        <input type="checkbox">
+                        <input type="checkbox" name="parede">
                         <span></span>
                     </label>
                     <label>Teto
-                        <input type="checkbox">
+                        <input type="checkbox" name="teto">
                         <span></span>
                     </label>
                 </div>
@@ -197,8 +197,8 @@
                     </header>
                     <div id="localTestes">
                         <div class="localTeste">
-                            <label>Nome
-                                <input type="text" placeholder="Nome do Teste">
+                            <label>Proficiência
+                                <input type="text" placeholder="Nome da Proficiência">
                             </label>
                             <label>CD
                                 <input type="text" placeholder="Classe de Dificuldade">
@@ -211,8 +211,8 @@
                     </div>
                 </div>
 
-                <button class="addButton" onclick="salvarArmadilha('modalForm')">Salvar</button>
-            </div>
+                <buttons class="addButton">Salvar</button>
+            </form>
         </div>
     </div>
 

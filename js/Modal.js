@@ -1,6 +1,6 @@
 class Modal {
 
-    iniciarModal(modalId) {
+    static iniciarModal(modalId) {
         const modal = document.getElementById(modalId)
 
         if(modal) {

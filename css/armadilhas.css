@@ -128,7 +128,7 @@
     box-sizing: border-box;
     background-color: #fdfdfd;
     padding: 20px 30px 20px 30px;
-    width: 45vw;
+    width: 50vw;
     height: 80vh;
     max-height: 90vh;
     border-radius: 3px;
@@ -319,6 +319,23 @@
     overflow: visible;
     overflow-x: hidden;
     overscroll-behavior: smooth;
+}
+
+#localTestes::-webkit-scrollbar {
+    width: 4px;
+}
+
+#localTestes::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+#localTestes::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 2px;
+}
+
+#localTestes::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
 }
 
 /* Animações */
