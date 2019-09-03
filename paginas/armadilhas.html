@@ -164,25 +164,16 @@
             <h3>Adicionar Armadilha</h3>
             <b class="fecharModal">X</b>
             <div id="modalForm">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" autocomplete="off">
+                <div class="modal-inputs">
+                    <label for="nome">Nome
+                        <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Ex: Espinhos">
+                    </label>
 
-                <label for="dano">Dano</label>
-                <input type="text" name="dano" id="dano" autocomplete="off">
-
-                <label for="tipo-dano">Tipo do dano</label>
-                <select id="tipo-dano">
-                    <option value="" hidden>Selecione o tipo de dano</option>
-                    <option value="corte">Corte</option>
-                    <option value="perfurante">Perfurante</option>
-                    <option value="impacto">Impacto</option>
-                    <option value="veneno">Veneno</option>
-                    <option value="magia">Magia</option>
-                    <option value="fogo">Fogo</option>
-                    <option value="gelo">Gelo</option>
-                    <option value="relâmpago">Relâmpago</option>
-                </select>
-
+                    <label for="dano">Dano e (tipo do dano)
+                        <input type="text" name="dano" id="dano" autocomplete="off" placeholder="Ex: 1d6(Perfurante)">
+                    </label>
+                </div>
+                
                 <label>Locais disponiveis</label>
                 <div class="locais">
                     <label>Chão

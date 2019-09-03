@@ -129,6 +129,7 @@
     background-color: #fdfdfd;
     padding: 20px 30px 20px 30px;
     width: 45vw;
+    height: 80vh;
     max-height: 90vh;
     border-radius: 3px;
     border: 7px solid #8b4000;
@@ -152,9 +153,9 @@
     font-family: 'fonte-righteous', monospace;
 }
 
-.modal input[type="text"], .modal select {
+.modal input[type="text"] {
     display: block;
-    width: 97.2%;
+    width: 100%;
     margin-top: 2px;
     margin-bottom: 10px;
     padding: 6px;
@@ -162,8 +163,17 @@
     border-radius: 6px;
 }
 
-.modal select {
+.modal-inputs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.modal-inputs label {
     width: 100%;
+}
+
+.modal-inputs label:first-child {
+    margin-right: 40px;
 }
 
 /* Estilo da seção de locais e dos checkboxes */
@@ -284,9 +294,9 @@
 }
 
 #adicionarTestes {
-    margin-top: 14px;
+    margin-top: 18px;
     margin-bottom: 18px;
-    max-height: 140px;
+    max-height: 230px;
 }
 
 #adicionarTestes header {
@@ -305,7 +315,7 @@
 }
 
 #localTestes {
-    max-height: 100px;
+    max-height: 180px;
     overflow: visible;
     overflow-x: hidden;
     overscroll-behavior: smooth;
@@ -345,6 +355,10 @@
     .modal {
         overflow: scroll;
         overflow-x: hidden;
+    }
+
+    .modal-inputs {
+        flex-direction: column;
     }
 
     .fecharModal {
