@@ -61,30 +61,18 @@ function marcarCheckbox(valor) {
 	} else {
 		element.value = 'on'
 	}
-	console.log(element.value)
-}
-
-function getInputs(target) {
-	const resultado = []
-	for(let e of target.elements) {
-		if(e.type !== 'button' && e.type !== 'submit') {
-			resultado.push(e)
-		}
-	}
-	return resultado
 }
 
 function salvarArmadilhas() {
-	const inputs = getInputs(armadilhaForm)
 	const Armadilha = {
-		nome: inputs[0].value,
-		dano: inputs[1].value,
-		chao: inputs[2].value,
-		parede: inputs[3].value,
-		teto: inputs[4].value
+		nome: armadilhaForm.nome.value,
+		dano: armadilhaForm.dano.value,
+		chao: armadilhaForm.chao.value,
+		parede: armadilhaForm.parede.value,
+		teto: armadilhaForm.teto.value
 	}
 
-	console.log(Armadilha)
+	console.table(Armadilha)
 }
 
 resetarInputs()
