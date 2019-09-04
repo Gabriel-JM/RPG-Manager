@@ -163,29 +163,29 @@
         <div class="modal">
             <h3>Adicionar Armadilha</h3>
             <b class="fecharModal">X</b>
-            <form id="modalForm" onsubmit="salvarArmadilhas()">
+            <form id="modalForm">
                 <div class="modal-inputs">
                     <label for="nome">Nome
-                        <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Ex: Espinhos">
+                        <input type="text" name="nome" autocomplete="off" placeholder="Ex: Espinhos">
                     </label>
 
                     <label for="dano">Dano e (tipo do dano)
-                        <input type="text" name="dano" id="dano" autocomplete="off" placeholder="Ex: 1d6(Perfurante)">
+                        <input type="text" name="dano" autocomplete="off" placeholder="Ex: 1d6(Perfurante)">
                     </label>
                 </div>
                 
                 <label>Locais disponiveis</label>
                 <div class="locais">
                     <label>Chão
-                        <input type="checkbox" name="chao">
+                        <input type="checkbox" name="chao" id="chao" onclick="marcarCheckbox('chao')">
                         <span></span>
                     </label>
                     <label>Parede
-                        <input type="checkbox" name="parede">
+                        <input type="checkbox" name="parede" id="parede" onclick="marcarCheckbox('parede')">
                         <span></span>
                     </label>
                     <label>Teto
-                        <input type="checkbox" name="teto">
+                        <input type="checkbox" name="teto" id="teto" onclick="marcarCheckbox('teto')">
                         <span></span>
                     </label>
                 </div>
@@ -198,20 +198,20 @@
                     <div id="localTestes">
                         <div class="localTeste">
                             <label>Proficiência
-                                <input type="text" placeholder="Nome da Proficiência">
+                                <input type="text" name="prof1" placeholder="Nome da Proficiência">
                             </label>
                             <label>CD
-                                <input type="text" placeholder="Classe de Dificuldade">
+                                <input type="text" name="cd1" placeholder="Classe de Dificuldade">
                             </label>
                             <label>Tipo de Dano
-                                <input type="text" placeholder="Dano caso falhe">
+                                <input type="text" name="tipoDano1" placeholder="Dano caso falhe">
                             </label>
-                            <button class="excluirTeste">X</button>
+                            <button type="button" class="excluirTeste">X</button>
                         </div>
                     </div>
                 </div>
 
-                <buttons class="addButton">Salvar</button>
+                <b class="addButton" type="button" onclick="salvarArmadilhas()">Salvar</b>
             </form>
         </div>
     </div>
