@@ -63,16 +63,28 @@ function marcarCheckbox(valor) {
 	}
 }
 
-function salvarArmadilhas() {
-	const Armadilha = {
-		nome: armadilhaForm.nome.value,
-		dano: armadilhaForm.dano.value,
-		chao: armadilhaForm.chao.value,
-		parede: armadilhaForm.parede.value,
-		teto: armadilhaForm.teto.value
+function coletarTestesDeResistencia() {
+	let array = []
+	for(let i=1; i<=quantidadeDeTestes; i++) {
+		array.push(new TesteDeResistencia(armadilhaForm[`prof${i}`].value,
+		armadilhaForm[`cd${i}`].value, armadilhaForm[`tipoDano${i}`].value))
 	}
+	return array
+}
 
-	console.table(Armadilha)
+function salvarArmadilhas() {
+	let testesArray = coletarTestesDeResistencia()
+
+	const armadilha = new Armadilha(
+		armadilhaForm.nome.value,
+		armadilhaForm.dano.value,
+		armadilhaForm.chao.value,
+		armadilhaForm.parede.value,
+		armadilhaForm.teto.value,
+		testesArray
+	)
+
+	console.table(armadilha)
 }
 
 resetarInputs()
