@@ -13,6 +13,10 @@
 }
 
 /*Mudanças gerais*/
+:root {
+    --main-bg-color: #ff9422;
+}
+
 * {
     outline: none;
 }
@@ -20,7 +24,24 @@
 body { 
     margin: 0px;
     font-family: monospace, sans-serif;
-    background-color: #ff9422;
+    background-color: var(--main-bg-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: rgba(150, 150, 150, 0.5);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
 }
 
 input:focus{ outline: none; }
@@ -77,7 +98,7 @@ input:focus{ outline: none; }
 }
 
 #conteudo {
-    width: 80vw;
+    width: 90vw;
     margin: auto;
     margin-top: 4vh;
     padding: 10px;

@@ -1,5 +1,6 @@
 /*** Variáveis ***/
 let quantidadeDeTestes = 1;
+const store = new LocalStorage('Armadilhas')
 
 // Captura o botão para abrir o modal
 const btn = document.getElementById('addArmadilha')
@@ -84,7 +85,7 @@ function salvarArmadilhas() {
 		testesArray
 	)
 
-	console.table(armadilha)
+	store.addToStorage(armadilha)
 }
 
 resetarInputs()
