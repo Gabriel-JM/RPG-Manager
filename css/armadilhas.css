@@ -24,7 +24,7 @@
     font-family: 'fonte-chelaOne';
     font-size: 25px;
     text-align: center;
-    padding: 0.5vh;
+    padding: 5px;
     padding-left: 8px;
     border-radius: 3px;
     border-left: 2px solid transparent;
@@ -300,7 +300,7 @@
 #conteudo {
     color: #111;
     font-family: 'fonte-righteous', monospace;
-    width: 92vw;
+    width: 95vw;
     margin-top: 10px;
     padding: 4px;
 }
@@ -365,8 +365,8 @@
 /* Viewport */
 @media screen and (max-width: 1024px) {
     .info-armadilhas {
-        width: 40vh;
-        height: 35vh;
+        width: 18vw;
+        height: 26vh;
     }
 
     .modal {
@@ -381,6 +381,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .info-armadilhas {
+        width: 25vw;
+    }
+
     .modal {
         overflow: scroll;
         overflow-x: hidden;
@@ -397,6 +401,11 @@
 }
 
 @media screen and (max-width: 425px) {
+    .info-armadilhas {
+        width: 80vw;
+        height: auto;
+    }
+
     .modal {
         width: 85vw;
         padding: 20px;
