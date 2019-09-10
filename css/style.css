@@ -62,6 +62,37 @@ input:focus{ outline: none; }
     flex-wrap: wrap;
 }
 
+.mensagem-container {
+    position: fixed;
+    width: auto;
+    top: 20px;
+    right: 15px;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    
+    animation: show-over 1s;
+}
+
+.mensagem-header {
+    padding: 0px 4px 4px 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.mensagem-header h3 {
+    margin: 0;
+}
+
+.mensagem-body {
+    margin-top: 8px;
+}
+
+.mensagem-body p {
+    margin: 0;
+}
+
 /*Mudanças especificas*/
 #cabecalho {
     background-color: #8b4000;
@@ -155,6 +186,16 @@ input:focus{ outline: none; }
 #back-menu a:hover {
     background-color: #ef820d;
     color: #ccc;
+}
+
+/* Animações */
+@keyframes show-over {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0px);
+    }
 }
 
 /*Media adjusts*/
