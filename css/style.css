@@ -15,6 +15,8 @@
 /*Mudanças gerais*/
 :root {
     --main-bg-color: #ff9422;
+    --success: rgb(60, 190, 60);
+    --failure: rgb(210, 60, 60);
 }
 
 * {
@@ -63,22 +65,21 @@ input:focus{ outline: none; }
 }
 
 .mensagem-container {
+    color: #f6f6f6;
     position: fixed;
     width: auto;
     top: 20px;
     right: 15px;
-    background-color: white;
     padding: 20px;
     margin: 0;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    
-    animation: show-over 1s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    animation: show-over 4s ease-out;
 }
 
 .mensagem-header {
     padding: 0px 4px 4px 4px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #f6f6f6;
 }
 
 .mensagem-header h3 {
@@ -91,6 +92,14 @@ input:focus{ outline: none; }
 
 .mensagem-body p {
     margin: 0;
+}
+
+.success {
+    background-color: var(--success);   
+}
+
+.failure {
+    background-color: var(--failure);
 }
 
 /*Mudanças especificas*/
@@ -190,11 +199,17 @@ input:focus{ outline: none; }
 
 /* Animações */
 @keyframes show-over {
-    from {
-        transform: translateX(200%);
+    0% {
+        transform: translateX(120%);
     }
-    to {
+    10% {
         transform: translateX(0px);
+    }
+    90% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(120%);
     }
 }
 

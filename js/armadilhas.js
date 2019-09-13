@@ -1,6 +1,7 @@
 /*** Variáveis ***/
 let quantidadeDeTestes = 1;
 const store = new LocalStorage('Armadilhas')
+const ui = new UserInterface()
 
 // Captura o botão para abrir o modal
 const btn = document.getElementById('addArmadilha')
@@ -13,7 +14,10 @@ const addTeste = document.querySelector('#localTestes')
 const addTesteBtn = document.querySelector('#adicionarTestes header button')
 
 /*** Eventos ***/
-btn.addEventListener('click', () => Modal.iniciarModal('addArmadilhaModal'))
+btn.addEventListener('click', () => {
+	ui.iniciarModal('addArmadilhaModal')
+	resetarCheckboxes()
+})
 
 addTesteBtn.addEventListener('click', e => {
 	e.preventDefault()
@@ -30,26 +34,28 @@ addTeste.addEventListener('click', e => {
 /*** Funções ***/
 
 function addTesteDeResistencia() {
-	const div = document.createElement('div')
-	div.classList.add('localTeste')
-	++quantidadeDeTestes
+	if(quantidadeDeTestes < 5) {
+		const div = document.createElement('div')
+		div.classList.add('localTeste')
+		++quantidadeDeTestes
 
-	div.innerHTML = `
-	<label>Proficiência
-		<input type="text" name="prof${quantidadeDeTestes}" placeholder="Nome da Proficiência">
-	</label>
-	<label> CD
-		<input type="text" name="cd${quantidadeDeTestes}" placeholder="Classe de Dificuldade">
-	</label>
-	<label>Tipo de Dano
-		<input type="text" name="tipoDano${quantidadeDeTestes}" placeholder="Dano caso falhe">
-	</label>
-	<button class="excluirTeste">X</button>`
+		div.innerHTML = `
+		<label>Proficiência
+			<input type="text" name="prof${quantidadeDeTestes}" placeholder="Nome da Proficiência">
+		</label>
+		<label> CD
+			<input type="text" name="cd${quantidadeDeTestes}" placeholder="Classe de Dificuldade">
+		</label>
+		<label>Tipo de Dano
+			<input type="text" name="tipoDano${quantidadeDeTestes}" placeholder="Dano caso falhe">
+		</label>
+		<button class="excluirTeste">X</button>`
 
-	addTeste.appendChild(div)
+		addTeste.appendChild(div)
+	}
 }
 
-function resetarInputs() {
+function resetarCheckboxes() {
 	armadilhaForm.chao.value = 'off'
 	armadilhaForm.parede.value = 'off'
 	armadilhaForm.teto.value = 'off'
@@ -74,20 +80,25 @@ function coletarTestesDeResistencia() {
 }
 
 function salvarArmadilhas() {
-	let testesArray = coletarTestesDeResistencia()
+	if(armadilhaForm.nome.value === '' ||
+		armadilhaForm.dano.value === '') {
+		ui.showMessages('Ops :(', 'Preencha os campos!', 'failure')
+	} else {
+		let testesArray = coletarTestesDeResistencia()
 
-	const armadilha = new Armadilha(
-		armadilhaForm.nome.value,
-		armadilhaForm.dano.value,
-		armadilhaForm.chao.value,
-		armadilhaForm.parede.value,
-		armadilhaForm.teto.value,
-		testesArray
-	)
+		const armadilha = new Armadilha(
+			armadilhaForm.nome.value,
+			armadilhaForm.dano.value,
+			armadilhaForm.chao.value,
+			armadilhaForm.parede.value,
+			armadilhaForm.teto.value,
+			testesArray
+		)
 
-	store.addToStorage(armadilha)
+		store.addToStorage(armadilha)
+		ui.fecharModal('addArmadilhaModal')
+		ui.showMessages('Sucesso', 'Armadilha adicionada com sucesso', 'success')
+	}
 }
-
-resetarInputs()
 
 // Testes
