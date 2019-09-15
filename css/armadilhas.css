@@ -155,7 +155,7 @@
     box-sizing: border-box;
     background-color: #fdfdfd;
     padding: 20px 30px 20px 30px;
-    width: 50vw;
+    width: 55vw;
     height: 80vh;
     max-height: 90vh;
     border-radius: 3px;
@@ -178,6 +178,7 @@
     font-size: 1.05rem;
     font-weight: 500;
     font-family: 'fonte-righteous', monospace;
+    box-sizing: border-box;
 }
 
 .modal input[type="text"] {
@@ -191,16 +192,14 @@
 }
 
 .modal-inputs {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
     margin-bottom: 10px;
 }
 
 .modal-inputs label {
-    width: 100%;
-}
-
-.modal-inputs label:first-child {
-    margin-right: 40px;
+    margin-right: 10%;
 }
 
 /* Estilo da seção de locais e dos checkboxes */
@@ -287,10 +286,11 @@
     border: none;
     color: white;
     font-weight: bolder;
-    height: 40px;
-    width: 30px;
+    height: 35px;
+    width: 60px;
     border-radius: 4px;
     cursor: pointer;
+    margin: auto;
 }
 
 
