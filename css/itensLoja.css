@@ -11,12 +11,9 @@ p { margin: 0px; }
 
 /*Mudanças Especificas*/
 #conteudo {
-    width: 93vw;
-    background-color: #aa7243;
-    border: 10px solid #631;
     border-radius: 10px;
     padding: 0px;
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 /*Classes*/

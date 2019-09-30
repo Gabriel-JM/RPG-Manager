@@ -14,9 +14,12 @@
 
 /*Mudanças gerais*/
 :root {
-    --main-bg-color: #ff9422;
+    --main-bg-backup: #e4bd7a;
+    --main-bg-color: #e5e5e5;
     --success: rgb(60, 190, 60);
     --failure: rgb(210, 60, 60);
+    --header-bg-backup: #3d2612;
+    --header-bg-color: #252525;
 }
 
 * {
@@ -34,16 +37,18 @@ body::-webkit-scrollbar {
 }
 
 *::-webkit-scrollbar-track {
-    background-color: rgba(150, 150, 150, 0.5);
+    background-color: #c4c4c4;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #ddd;
+    background-color: rgb(80, 80, 80);
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #333;
+    background-color: #222;
+    cursor: grab;
 }
 
 input:focus{ outline: none; }
@@ -104,11 +109,11 @@ input:focus{ outline: none; }
 
 /*Mudanças especificas*/
 #cabecalho {
-    background-color: #8b4000;
+    background-color: var(--header-bg-color);
     margin-top: -21px;
     padding: 8px;
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
-    color: #350a07;
+    color: var(--main-bg-color);
 }
 
 #titulo {
@@ -133,7 +138,7 @@ input:focus{ outline: none; }
     top: 20px;
     left: 13px;
     transform: rotate(45deg);
-    background-color: #350a07;
+    background-color: var(--main-bg-color);
     border-radius: 2px;
 }
 
@@ -147,10 +152,18 @@ input:focus{ outline: none; }
     justify-content: center;
     flex-wrap: wrap;
     min-height: 300px;
+    
+}
+
+#conteudo:not(.main) {
+    width: 93vw;
+    background-color: rgba(50, 50, 50, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 #footer-message {
-    border-bottom: 2px solid #ef820d;
+    border-bottom: 2px solid var(--main-bg-color);
     width: 90%;
     margin-bottom: 10px;
     padding: 5px;
@@ -158,14 +171,14 @@ input:focus{ outline: none; }
 
 #footer-message h2 {
     margin: auto;
-    color: #ef820d;
+    color: var(--main-bg-color);
     font-size: 5vh;
     font-style: italic;
     font-family: fonte-chelaone, monospace;
 }
 
 #back-menu {
-    background-color: #8b4000;
+    background-color: var(--header-bg-color);
     margin: auto;
     margin-top: 8vh;
     padding: 1vw;
@@ -179,12 +192,12 @@ input:focus{ outline: none; }
 #back-menu a {
     text-decoration: none;
     width: 10vw;
-    color: #ef820d;
+    color: var(--main-bg-color);
     font-family: fonte-righteous, monospace;
     text-align: center;
     font-size: 1.5vw;
     font-weight: 500;
-    border: 2px solid #ef820d;
+    border: 2px solid var(--main-bg-color);
     border-radius: 10px;
     margin: 8px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
@@ -193,8 +206,8 @@ input:focus{ outline: none; }
 }
 
 #back-menu a:hover {
-    background-color: #ef820d;
-    color: #ccc;
+    background-color: var(--main-bg-color);
+    color: var(--header-bg-color);
 }
 
 /* Animações */
