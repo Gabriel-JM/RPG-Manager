@@ -6,4 +6,4 @@ Was an idea that i had, then i tried. But in that time, i didn't know much about
 Was a good pratice. I will came back with this project, wait for me!
 
 ### How to use?
-Just double click om the index.html.
+Just double click on the index.html.
